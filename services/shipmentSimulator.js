@@ -8,8 +8,24 @@ function getRandomInRange(min, max, decimals = 6) {
 const statuses = ['IN_TRANSIT', 'AT_HUB', 'OUT_FOR_DELIVERY'];
 
 let initialMockShipmentsData = [
-    { tracking_number: 'TN123456789', origin: 'New York, NY', destination: 'Los Angeles, CA', current_latitude: 40.7128, current_longitude: -74.0060, status: 'IN_TRANSIT', estimated_delivery_date: '2024-12-15' },
-    { tracking_number: 'TN987654321', origin: 'Chicago, IL', destination: 'Miami, FL', current_latitude: 41.8781, current_longitude: -87.6298, status: 'PENDING', estimated_delivery_date: '2024-12-12' },
+    {
+        tracking_number: 'SA_CPT_JHB_NEW_001', // NEW UNIQUE TRACKING NUMBER
+        origin: 'Cape Town, WC',
+        destination: 'Johannesburg, GP',
+        current_latitude: -33.9258,     // Cape Town coordinates
+        current_longitude: 18.4232,
+        status: 'PENDING',             // Initial status
+        estimated_delivery_date: '2024-12-20' // Example ETA
+    },
+    {
+        tracking_number: 'SA_JHB_DBN_NEW_002', // NEW UNIQUE TRACKING NUMBER
+        origin: 'Johannesburg, GP',
+        destination: 'Durban, KZN',
+        current_latitude: -26.2041,     // Johannesburg coordinates
+        current_longitude: 28.0473,
+        status: 'IN_TRANSIT',          // Initial status
+        estimated_delivery_date: '2024-12-18' // Example ETA
+    }
 ];
 
 let activeSimulatedShipments = [];
